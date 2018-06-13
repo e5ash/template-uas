@@ -18,7 +18,7 @@ get_header(); ?>
 			<div class="case">
 				<div class="advantages__list row_line">
 					<?php for ($i=1; $i < 5; $i++) { ?>
-					<div class="advantages__item<?php if($i==2){echo " advantages__item_pt";} ?> col_line">
+					<div class="advantages__item<?php if($i==3 || $i==4){echo " advantages__item_pt";} ?> col_line">
 						<div class="advantages__img"><img src="<?php the_field('преимущества_'.$i.'_изображение'); ?>" alt=""></div>
 						<div class="advantages__title"><?php the_field('преимущества_'.$i.'_текст'); ?></div>
 					</div>
@@ -105,7 +105,7 @@ get_header(); ?>
 				<div class="data__block">
 					<div class="data__head data__head_black"><i class="icon icon-minusbox"></i><span>НЕ входит в стоимость</span></div>
 					<div class="data__body">
-						<div class="data__wrap data__wrap_minus data__wrap_tripple row_line">
+						<div class="data__wrap data__wrap_minus row_line">
 							<div class="data__col col_line"><?php the_field('не_входит_в_стоимость_левый_столбец'); ?></div>
 							<div class="data__col col_line"><?php the_field('не_входит_в_стоимость_правый_столбец'); ?></div>
 						</div>
@@ -123,7 +123,7 @@ get_header(); ?>
 		</div>
 		<div class="peru">
 			<div class="case">
-				<div class="peru__title title"><span>Скалистые горы</span><img src="upload/text/text-usa.png" alt=""></div>
+				<div class="peru__title title"><span>Скалистые горы</span><img src="upload/text/text-uar.png" alt=""></div>
 				<div class="peru__wrap">
 					<div class="peru__text"><?php the_field('перу_текст'); ?></div>
 					<a data-fancybox data-src="#popup-callback" href="javascript:;" class="peru__btn btn btn_orange btn_orange btn_radius">Оставить заявку</a>
@@ -162,6 +162,7 @@ get_header(); ?>
 						<div class="team__img col_line"><img src="<?php the_field('команда_изображение'); ?>" alt=""></div>
 						<div class="team__data col_line">
 							<div class="team__data-title"><?php the_title(); ?></div>
+							<div class="team__data-desc"><?php the_field('команда_описание'); ?></div>
 							<div class="team__data-list"><?php the_content(); ?></div>
 						</div>
 						<?php } ?>
